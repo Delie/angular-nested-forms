@@ -1,5 +1,7 @@
 # AngularNestedForms
 
+Simple project to experiment with nested reactive forms utilising ControlValueAccessor
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
 ## Development server
