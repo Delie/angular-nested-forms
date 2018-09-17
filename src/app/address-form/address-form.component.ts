@@ -21,7 +21,6 @@ export interface IAddress {
 })
 export class AddressFormComponent implements OnInit, ControlValueAccessor {
   public addressForm: FormGroup;
-  public addressFormValue: any;
 
   private formControls: any;
   private originalValue: any;
@@ -43,17 +42,17 @@ export class AddressFormComponent implements OnInit, ControlValueAccessor {
   private _onTouched = (_: any) => {};
 
   set value(value: IAddress) {
-    this.addressFormValue = value;
+    this.addressForm.setValue(value);
     this._onChange(this.addressForm.value);
   }
 
   get value() {
-    return this.addressFormValue;
+    return this.addressForm.value;
   }
 
   writeValue(value: IAddress): void {
     if (value && value !== null) {
-      this.addressFormValue = value;
+      this.addressForm.setValue(value);
       this.originalValue = value;
     }
   }
