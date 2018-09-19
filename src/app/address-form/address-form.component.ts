@@ -43,7 +43,6 @@ export class AddressFormComponent implements OnInit, ControlValueAccessor {
 
     this.fg.valueChanges.subscribe(val => {
       this._onChange(val);
-      console.log(this.fg.controls.addressLine1.errors);
     });
   }
 
