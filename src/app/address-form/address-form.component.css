@@ -1,28 +1,7 @@
 .subForm {
   padding: 10px;
-  background: #4286f4;
-  color: #fff;
-  margin-top: 1px;
+  background: #ddd;
 }
-
-h2 {
-  margin: 0px 0px 5px 0px;
-}
-
-label {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-input {
-  margin-top: 2px;
-}
-
-.formRow {
-  padding: 8px;
-}
-
-.errorText {
-  padding: 5px;
-  color: red;
+p {
+  padding-left: 20px;
 }

@@ -1,12 +1,8 @@
-<div class="form">
-  <h1>Main Form ({{ fg.status }})</h1>
-  <strong>Value:</strong> {{ fg.value | json }}
-</div>
-<form [formGroup]="fg" (submit)="submitForm()">
+<div class="form">App Form</div>
+<form [formGroup]="registerForm">
   <app-address-form formControlName="billingAddress"></app-address-form>
   <app-address-form formControlName="shippingAddress"></app-address-form>
-  <div class="footer">
-    <button type="submit">Submit</button>
-    <button type="button" (click)="resetForm()">Reset</button>
-  </div>
 </form>
+
+<p>App Form Value: {{ registerForm.value | json }}</p>
+<p>Form status: {{ registerForm.status | json }}</p>

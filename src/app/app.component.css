@@ -1,18 +1,9 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+}
+
 .form {
   padding: 10px;
-  background: #1b60d1;
-  color: #fff;
-}
-
-h1 {
-  margin: 0px 0px 5px 0px;
-}
-
-.footer {
-  padding: 20px 10px 20px 10px;
-  background: #aaa;
-}
-
-.footer > button {
-  margin-right: 10px;
+  background: #bbb;
 }

@@ -1,51 +1,27 @@
-<div class='subForm'>
-  <h2>Sub-Form ({{ fg.status }})</h2>
-  <strong>Value:</strong> {{ fg.value | json }}
-</div>
-<form [formGroup]="fg">
-  <div class="formRow">
-    <label for="addressLine1">Address Line 1:</label><br />
-    <input type="text" formControlName="addressLine1" name="addressLine1" id="addressLine1" />
-    <div *ngIf="fg.controls.addressLine1.errors && fg.controls.addressLine1.errors.required" class="errorText">
-      Required field
-    </div>
-  </div>
-  <div class="formRow">
-    <label for="addressLine2">Address Line 2:</label><br />
-    <input type="text" formControlName="addressLine2" name="addressLine2" id="addressLine2" />
-    <div *ngIf="fg.controls.addressLine2.errors && fg.controls.addressLine2.errors.required" class="errorText">
-      Required field
-    </div>
-  </div>
-  <div class="formRow">
-    <label for="town">Town: </label><br />
-    <input type="text" formControlName="town" name="town" id="town" />
-    <div *ngIf="fg.controls.town.errors && fg.controls.town.errors.required" class="errorText">
-      Required field
-    </div>
-  </div>
-  <div class="formRow">
-    <label for="postcode">Postcode: </label><br />
-    <input type="text" formControlName="postcode" name="postcode" id="postcode" />
-    <div *ngIf="fg.controls.postcode.errors && fg.controls.postcode.errors.required" class="errorText">
-      Required field
-    </div>
-  </div>
-  <div class="formRow">
-    <label for="county">County:</label><br />
-    <input type="text" formControlName="county" name="county" id="county" />
-    <div *ngIf="fg.controls.county.errors && fg.controls.county.errors.required" class="errorText">
-      Required field
-    </div>
-  </div>
-  <div class="formRow">
-    <label for="country">Country:</label><br />
-    <input type="text" formControlName="country" name="country" id="country" />
-    <div *ngIf="fg.controls.country.errors && fg.controls.country.errors.required" class="errorText">
-      Required field
-    </div>
-  </div>
-  <div class="formRow">
+<div class='subForm'><b>Sub Form</b></div>
+<form [formGroup]="addressForm">
+  <p>
+    <label for="number">House Name / Number: </label><br/>
+    <input type="text" formControlName="addressNumber" name="addressNumber" id="addressNumber" value="{{ value.addressNumber }}" (change)="formUpdate($event)" />
+  </p>
+  <p>
+    <label for="street">Address Line 1:</label><br/>
+    <input type="text" formControlName="addressLine1" name="addressLine1" id="addressLine1" value="{{ value.addressLine1 }}" (change)="formUpdate($event)" />
+  </p>
+  <p>
+    <label for="city">City: </label><br/>
+    <input type="text" formControlName="city" name="city" id="city" value="{{ value.city }}" (change)="formUpdate($event)" />
+  </p>
+  <p>
+    <label for="zipCode">Zip Code: </label><br/>
+    <input type="text" formControlName="zipcode" name="zipcode" id="zipcode" value="{{ value.zipcode }}" (change)="formUpdate($event)" />
+  </p>
+  <p>
+    <label for="country">Country:</label><br/>
+    <input type="text" formControlName="country" name="country" id="country" value="{{ value.country }}" (change)="formUpdate($event)" />
+  </p>
+  <p>
     <button (click)="reset();">Reset</button>
-  </div>
+  </p>
 </form>
+
